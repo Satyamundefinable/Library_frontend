@@ -1,0 +1,5 @@
+body::selection {
+    background-color: rgb(144, 53, 230);
+    color: rgb(246, 241, 241);
+    font-weight:bold;
+}
