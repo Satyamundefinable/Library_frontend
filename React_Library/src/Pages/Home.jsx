@@ -40,7 +40,6 @@ export const Home = () => {
    
     <div className="home-container">
       <section className="hero">
-        <h2>Welcome to Pt. Jawahar Lal Nehru Centrel Library</h2>
         <p>Your gateway to a world of knowledge, culture, and community.</p>
         <button> <NavLink to= "catalog">Explore Now </NavLink></button>
       </section>
