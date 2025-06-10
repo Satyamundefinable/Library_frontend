@@ -3,19 +3,51 @@ import './home.css';
 
 export const Home = () => {
   const booksData = [
-    { id: 1, title: "Classic Novel", bookname: "To Kill a Mockingbird", author: "Harper Lee" },
-  { id: 2, title: "Historical Fiction", bookname: "Chitralekha", author: "Bhagwati Charan Verma" },
-  { id: 3, title: "Finance", bookname: "The Psychology of Money", author: "Morgan Housel" },
-  { id: 4, title: "Political Satire", bookname: "Rag Darbari", author: "Shri Lal Shukla" },
-  { id: 5, title: "Classic Dystopia", bookname: "1984", author: "George Orwell" }
+    {
+      id: 1,
+      bookName: "To Kill Mockingbird",
+      writer: "Harper Lee",
+      image: "/Mockingbird_book.webp"
+    },
+    {
+      id: 2,
+      bookName: "Mujhe Chand Chahiye",
+      writer: "Surendra Verma",
+      image: "/Mujhe-Chand-Chahiye_book.webp"
+    },
+    {
+      id: 3,
+      bookName: "Gunahon Ka Devta",
+      writer: "Dharamvir Bharti",
+      image: "/Gunahon_ka_devta_book.webp"
+    },
+    {
+      id: 4,
+      bookName: "The Subtle Art of Not Giving a F*ck",
+      writer: "Mark Manson",
+      image: "/The-Subtle-Art-of-Not-Giving-a _F*ck_book.webp"
+    },
+    {
+      id: 5,
+      bookName: "Rich Dad Poor Dad .webp",
+      writer: "Robert Kiyosaki",
+      image: "/Rich-Dad-Poor-Dad_book.webp"
+    },
   ];
+  
   return (
+    <>
+   
     <div className="home-container">
       <section className="hero">
-        <h1>Welcome to Pt. Jawahar Lal Nehru Centrel Library</h1>
+        <h2>Welcome to Pt. Jawahar Lal Nehru Centrel Library</h2>
         <p>Your gateway to a world of knowledge, culture, and community.</p>
         <button> <NavLink to= "catalog">Explore Now </NavLink></button>
       </section>
+
+      <div style={{display:'flex', justifyContent:'center',alignItems:'center'}}>
+      <img src="/DHSGCU11.png" alt="" style={{width:'80vw',height:'50vh',border:'2px solid black', borderRadius:'10px',padding:'2vh 0'}}/>
+    </div>
 
       <section className="about">
         <h1>About Us</h1>
@@ -34,8 +66,9 @@ export const Home = () => {
         {booksData.map ( book =>  (
           <div key={book.id} className='book-card'>
             <h3>{book.title}</h3>
-          <p><strong>Book:</strong> {book.bookname}</p>
-          <p><strong>Author:</strong> {book.author}</p>
+          <p style={{fontSize:'1.5rem'}}><strong>Book:</strong> {book.bookname}</p>
+          <p style={{fontSize:'1.5rem'}}><strong>Author:</strong> {book.writer}</p>
+          <img src={book.image} alt={book.bookname} style={{height:'500px', width:'300px', border:'3px solid rgba(1,1,1,4)', borderRadius:'1.2rem'}}/>
           </div>
         )
           
@@ -49,5 +82,6 @@ export const Home = () => {
         <button> <NavLink to = "contact"> Join Now</NavLink></button>
       </section>
     </div>
+    </>
   );
 };

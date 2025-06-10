@@ -1,25 +1,110 @@
 import "./about.css"
 export const About = () => {
+    const facultyInfo = [
+        {
+            id : 1,
+            name : "Dr. Mohan T. A.",
+            designation : "Librarian",
+            mobile : "9343525141",
+            email : "mohan@dhsgsu.edu.in",
+            image : "/Dr.-Mohan-T.-A._Library.jpeg"
+        },
+        {
+            id : 2,
+            name : "Dr. Mukesh Sahu",
+            designation : "Assistant Librarian",
+            mobile : "9425437265",
+            email : "msahu@dhsgsu.edu.in",
+            image : "/Dr.-Mukesh-Sahu"
+        },
+        {
+            id : 3,
+            name : "Dr. Anurag Shrivastava",
+            designation : "Assistant Librarian",
+            mobile : "9425424909",
+            email : "ashrivastava@dhsgsu.edu.in",
+            image : "/Anurag-Shrivastava.jpg"
+        },
+        {
+            id : 4,
+            name : "Dr. Dayanandappa Kori",
+            designation : "Information Scientist",
+            mobile : "7829932452",
+            email : "mkoridh@dhsgsu.edu.in",
+            image : "/Dayanand-Kori.jpg"
+        },
+        {
+            id : 5,
+            name : "Ms. Raksha Choudhary",
+            designation : "Professional Assistant",
+            mobile : "07582297172",
+            email : "pronlass1@dhsgsu.edu.in",
+            image : "/Raksha-Choudhary.jpeg"
+        },
+        {
+            id : 6,
+            name : "Ms. Aditi Upadhaya",
+            designation : "Semi Professional Assistant",
+            mobile : "07582297172",
+            email : "upadhyay.a@dhsgsu.edu.in",
+            image : "/Aditi-Upadhyaya.jpeg"
+        },
+        {
+            id : 7,
+            name : "Mr. Abhinay Shroti",
+            designation : "Semi Professional Assistant",
+            mobile : "7389715747",
+            email : "abhishroti1997@gmail.com",
+            image : "/Abhinay-Shroti.jpeg"
+        },
+    ];
     return (
-        <div
-            style={{ padding: "20px",margin: " 2rem 5rem", textAlign: "center"}}>
-                <img src="/photo.webp" alt="Dr. Hari Singh Gour" style={{ width: "95%", height: "auto", border:"2px solid green", borderRadius:"10px" }} />
-            <p>
+        <>      
+          <div className="main-box">
+        <div className="aboutBox">
+            <img src="/photo.webp" alt="Dr. Hari Singh Gour"  />
+            {/* <p>
                 Doctor Harisingh Gour Vishwavidyalaya Sagar, formerly University of Saugor, was established on 18th July 1946 by Dr. Sir Hari Singh Gour (Nov. 26, 1870 – Dec. 25, 1949) by his lifetime savings.
                 This 18th University of India and the oldest and the biggest University of Madhya Pradesh has perhaps the singular distinction of being founded by the munificence of a single person's
                 hard earned money of about two crore of rupees. Apart from being a great jurist and legal luminary par excellence, he was a great Patriot, Philanthropist, Educationist and Social Reformer. <br /><br />
 
 
+            </p> */}
+            <p>
+             <b>Jawaharlal Nehru Library</b>, Dr. Harisingh Gour Vishwavidyalaya Sagar (Central University) is the oldest and Largest University Library situated in the Sagar district of Madhya Pradesh. It is located at the Centre of the University Teaching Departments to help the users for better and regular use of the Library. The Library has 3 stories Stack designed to accommodate 4 lacs volumes with an extension wing and a seminar hall. The present building's foundation stone was laid down by former Prime Minister Pt. Jawahar Lal Nehru. On the occasion of the University Commission’s tour of Saugor, Sir Radhakrishnan observed the following in connection with the site there: “This seat of the University with its situation amidst beautiful natural scenery would have been turned into a beauty spot in any other civilized country.”
             </p>
-            <p>
-                Dr. Hari Singh Gour was the first Vice-Chancellor of University of Delhi (1922 to 1926) and first Dean (1924) of The Faculty of Law in the University of Delhi. Dr. Hari Singh Gour also held the position of Vice-Chancellor of the Nagpur University, (two times in 1928 and 1936).
-            </p><br />
-            <p>
-                Dr. Gour was the founder Vice–Chancellor of the Sagar University (1946). The Govt. of India honored his memory by issuing a commemorative postage stamp in 1976. The University was rechristened as Doctor Hari Singh Gour Vishwavidyalaya in February 1983 by the State Legislature. The University is situated 5 Km east of Sagar city and its campus covers an area of 1312.89 acres over Pathariya hills connected to the Vindhya Range, surrounded by lush green forest (about 100 acres) within its campus and has effectively contributed to the maintenance and preservation of ecosystem and its biodiversity. It is one of the finest picturesque campuses in India.
-            </p><br />
-            <p>
-                It has 36 University teaching departments (number keeps adding) 11 schools and 19 affiliated colleges covering various districts of M.P. There are 4 hostels for boys (940 seats) and two hostels for girls ( app. 400 seats). State Bank of India. Post office, STD booth, Employment and Guidance Bureau, 3 canteens including fully furnished Indian Coffee House (ICH) and a shopping complex provide auxiliary services in the campus. The Jawaharlal Nehru Library of the University has more than 4,00,000 books.
-            </p><br />
         </div>
+
+        </div>
+        <div className="infoTable">
+            <h2>Faculty Information</h2>
+            <table >
+                <thead>
+                <tr>
+                    <th>S.No.</th>
+                    <th>Name & Designation </th>
+                    <th>Contact</th>
+                    <th>Profile</th>
+                </tr>
+                </thead>
+                <tbody>
+                    {facultyInfo.map ((data) => (
+
+                    
+                <tr key={data.id}>
+                    <td>{data.id}</td>
+                    <td><strong>{data.name}</strong> <br /> {data.designation}</td>
+                    <td>Mobile : {data.mobile} <br />Email : {data.email}</td>
+                    <td><img src={data.image} alt={data.name} style= {{ height:'100px'}} /></td>
+                     
+                </tr>
+                ))}
+                </tbody>
+
+            </table>
+        </div>
+        </>
+
+
     );
 };

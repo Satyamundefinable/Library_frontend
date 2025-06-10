@@ -19,7 +19,7 @@ header {
 }
 
 .container {
-  width: 90%;
+  width: 100%;
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -29,7 +29,12 @@ header {
   justify-content: space-between;
   align-items: center;
 }
-
+.navbar h2 {
+  color:#ffe3a9;
+  /* background-color: rgb(0, 0, 0); */
+  padding: 2px 10px;
+  font-size: 2rem;
+}
 .Logo a {
   text-decoration: none;
 }
@@ -80,6 +85,8 @@ nav ul li a {
   display: none;
 
 }
+
+
 button .toggle {
   font-size: 2rem;
 }
@@ -106,6 +113,7 @@ button .toggle {
     display: block;
     width: 100%;
   }
+
   .web-menu {
     display: none;
   }
@@ -120,6 +128,7 @@ button .toggle {
     justify-content:center;
     width: 80px;
     top: 20px;
+
     right: 5rem;
     background-color: #002e58;
     box-shadow: rgba(142, 124, 124, 0.3) ;
@@ -127,6 +136,14 @@ button .toggle {
     
     
   }
+.web-menu{
+    right: 40px;
+    background-color: #002e58;
+    box-shadow: rgba(142, 124, 124, 0.3) ;
+    border-radius: 1rem;    
+  }
+
+
   .mob-menu ul {
     display: flex;
     flex-direction: column;
@@ -144,4 +161,11 @@ button .toggle {
    .mob-menu ul li {
     color: #1e1e2f;
    }
-}
+
+
+
+   .mob-menu ul li {
+    color: #1e1e2f;
+   }
+
+  }

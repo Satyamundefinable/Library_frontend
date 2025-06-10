@@ -1,5 +1,44 @@
-body::selection {
-    background-color: rgb(144, 53, 230);
-    color: rgb(246, 241, 241);
-    font-weight:bold;
+.main-box {
+    display: flex;
+    justify-content: center;
+
 }
+.aboutBox {
+    display: flex;
+    border-radius: 2px;
+    justify-content: center;
+    flex-direction: column;
+    width: 40vw;
+    gap: 2rem;
+    padding: 20px;
+    margin: 2rem 5rem;
+    text-align: center;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.7);
+    & img {
+        box-shadow: 0 3px 12px rgba(85, 84, 86, 0.7);
+        width: 100%;
+    }
+}
+.infoTable {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+ 
+.infoTable table {
+        border-collapse: collapse;
+        border: 1px solid black;
+        width: 60%;
+        text-align: center;
+        margin: 2rem 0;
+        /* &td , &th {
+            padding: 20px 20px ;
+            text-align: right;
+        } */
+    }
+    .infoTable table td,
+    .infoTable table th {
+        border: 2px solid black;
+
+    }
