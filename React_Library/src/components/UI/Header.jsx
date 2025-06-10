@@ -20,7 +20,7 @@ export const Headers = () => {
                     <img src="/photo.webp" alt="" style={{ height: "100px", width: "100px", borderRadius: "50%" }} />
                 </NavLink></div>
                 <nav className={showMenu ? "mob-menu" : "web-menu"}>
-                    <ul className={ setShowMenu ? "web-menu" : "mob-menu"} >
+                    <ul className= "web-menu" >
                         <li> <NavLink to="/" >Home</NavLink></li>
                         <li> <NavLink to="events" >Events</NavLink></li>
                         <li> <NavLink to="Catalog" >Catalog</NavLink></li>
