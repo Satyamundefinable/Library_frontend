@@ -68,7 +68,7 @@ nav ul li a:hover {
 
 }
 
-nav ul li a.active {
+nav ul li a:active {
   background-color: #ffffff;
   color: #1e1e2f;
 }
@@ -76,10 +76,17 @@ nav ul li a.active {
 nav ul li a {
   transition: all 0.3s ease-in-out;
 }
+.ham-menu {
+  display: none;
 
-@media (max-width: 768px) {
+}
+button .toggle {
+  font-size: 2rem;
+}
+
+@media (max-width: 978px) {
   .navbar {
-    flex-direction: column;
+    flex-direction: row;
     align-items: flex-start;
   }
 
@@ -97,4 +104,39 @@ nav ul li a {
     display: block;
     width: 100%;
   }
+  .web-menu {
+    display: none;
+  }
+
+  .ham-menu {
+    display: inline-block;
+    text-align: end;
+  }
+  .mob-menu {
+    position: absolute;
+    display: flex;
+    justify-content:center;
+    width: 80px;
+    top: 1rem;
+    right: 10%;
+    background-color: #555252;
+    box-shadow: rgba(0, 0, 0, 2rem) ;
+    
+  }
+  .mob-menu ul {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    
+    & li:first-child {
+      margin-top: 1.2rem;
+    }
+    & li:last-child {
+      margin-bottom: 1.2rem;
+    }
+  }
+   .mob-menu ul li {
+    color: #1e1e2f;
+   }
 }
