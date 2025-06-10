@@ -84,7 +84,9 @@ button .toggle {
   font-size: 2rem;
 }
 
-@media (max-width: 978px) {
+
+
+@media (max-width: 900px) {
   .navbar {
     flex-direction: row;
     align-items: flex-start;
@@ -109,7 +111,7 @@ button .toggle {
   }
 
   .ham-menu {
-    display: inline-block;
+    display: inline;
     text-align: end;
   }
   .mob-menu {
@@ -117,24 +119,27 @@ button .toggle {
     display: flex;
     justify-content:center;
     width: 80px;
-    top: 1rem;
-    right: 10%;
-    background-color: #555252;
-    box-shadow: rgba(0, 0, 0, 2rem) ;
+    top: 20px;
+    right: 5rem;
+    background-color: #002e58;
+    box-shadow: rgba(142, 124, 124, 0.3) ;
+    border-radius: 1rem;
+    
     
   }
   .mob-menu ul {
     display: flex;
     flex-direction: column;
-    /* justify-content: center; */
     align-items: center;
     
     & li:first-child {
       margin-top: 1.2rem;
     }
+
     & li:last-child {
       margin-bottom: 1.2rem;
     }
+
   }
    .mob-menu ul li {
     color: #1e1e2f;
