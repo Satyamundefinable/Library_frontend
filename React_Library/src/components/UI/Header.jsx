@@ -7,9 +7,14 @@ import { GiHamburgerMenu } from "react-icons/gi";
 
 export const Headers = () => {
     const [showMenu, setShowMenu] = useState(false);
+    const [isOpen, setIsOpen] = useState(true);
     const handleToggleButton = () => {
         setShowMenu(!showMenu);
     }
+    const handleToggleUl = () => {
+        setIsOpen(!isOpen)
+    }
+
     return <header>
         <div className="container">
             <div className="navbar">
@@ -17,7 +22,7 @@ export const Headers = () => {
                     <img src="/photo.webp" alt="" style={{ height: "100px", width: "100px", borderRadius: "50%" }} />
                 </NavLink></div>
                 <nav className={showMenu ? "mob-menu" : "web-menu"}>
-                    <ul>
+                    <ul onClick={isOpen ? "web-menu" : "mob-menu"} >
                         <li> <NavLink to="/" >Home</NavLink></li>
                         <li> <NavLink to="events" >Events</NavLink></li>
                         <li> <NavLink to="Catalog" >Catalog</NavLink></li>
