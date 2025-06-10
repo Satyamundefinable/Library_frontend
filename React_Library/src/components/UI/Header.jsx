@@ -11,9 +11,7 @@ export const Headers = () => {
     const handleToggleButton = () => {
         setShowMenu(!showMenu);
     }
-    const handleToggleUl = () => {
-        setIsOpen(!isOpen)
-    }
+    setIsOpen(!isOpen);
 
     return <header>
         <div className="container">
@@ -22,7 +20,7 @@ export const Headers = () => {
                     <img src="/photo.webp" alt="" style={{ height: "100px", width: "100px", borderRadius: "50%" }} />
                 </NavLink></div>
                 <nav className={showMenu ? "mob-menu" : "web-menu"}>
-                    <ul onClick={isOpen ? "web-menu" : "mob-menu"} >
+                    <ul className={isOpen ? "web-menu" : "mob-menu"} >
                         <li> <NavLink to="/" >Home</NavLink></li>
                         <li> <NavLink to="events" >Events</NavLink></li>
                         <li> <NavLink to="Catalog" >Catalog</NavLink></li>
