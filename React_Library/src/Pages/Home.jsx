@@ -29,7 +29,7 @@ export const Home = () => {
     },
     {
       id: 5,
-      bookName: "Rich Dad Poor Dad .webp",
+      bookName: "Rich Dad Poor Dad",
       writer: "Robert Kiyosaki",
       image: "/Rich-Dad-Poor-Dad_book.webp"
     },
