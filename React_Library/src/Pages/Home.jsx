@@ -65,9 +65,9 @@ export const Home = () => {
         {booksData.map ( book =>  (
           <div key={book.id} className='book-card'>
             <h3>{book.title}</h3>
-          <p style={{fontSize:'1.5rem'}}><strong>Book:</strong> {book.bookname}</p>
+          <p style={{fontSize:'1.5rem'}}><strong>Book:</strong> {book.bookName}</p>
           <p style={{fontSize:'1.5rem'}}><strong>Author:</strong> {book.writer}</p>
-          <img src={book.image} alt={book.bookname} style={{height:'500px', width:'300px', border:'3px solid rgba(1,1,1,4)', borderRadius:'1.2rem'}}/>
+          <img src={book.image} alt={book.bookName} style={{height:'500px', width:'300px', border:'3px solid rgba(1,1,1,4)', borderRadius:'1.2rem'}}/>
           </div>
         )
           
