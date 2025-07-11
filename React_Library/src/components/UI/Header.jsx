@@ -22,7 +22,6 @@ export const Headers = () => {
                             <img src="/photo.webp" alt="" style={{ height: "100px", width: "100px", borderRadius: "50%" }} />
                         </NavLink>
                     </div>
-                    <h2> Pt. Jawahar Lal Nehru Central Library  </h2>
                     <nav className={showMenu ? "mob-menu" : "web-menu"}>
                         <ul>
                             <li> <NavLink to="/" >Home</NavLink></li>
